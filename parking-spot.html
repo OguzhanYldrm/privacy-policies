@@ -67,7 +67,7 @@
 <body>
     <div class="language-selector">
         <label for="languageDropdown">Select Language / Dil Seçin:</label>
-        <select id="languageDropdown" onchange="changeLanguage(this.value)">
+        <select id="languageDropdown">
             <option value="en">English</option>
             <option value="tr">Türkçe</option>
             <option value="ar">العربية</option>
@@ -442,6 +442,10 @@
             }
         };
 
+        document.getElementById('languageDropdown').addEventListener('change', function() {
+            changeLanguage(this.value);
+        });
+
         function changeLanguage(lang) {
             const trans = translations[lang];
             if (trans) {
@@ -468,16 +472,14 @@
                 document.getElementById('section7').textContent = trans.section7;
                 document.getElementById('closing1').textContent = trans.closing1;
                 document.getElementById('closing2').textContent = trans.closing2;
-                localStorage.setItem('selectedLanguage', lang);
             }
         }
 
-        // Sayfayı yükledikten sonra kullanıcının daha önceki dil tercihini al
-        window.onload = function() {
-            const savedLanguage = localStorage.getItem('selectedLanguage') || 'en';
-            document.getElementById('languageDropdown').value = savedLanguage;
-            changeLanguage(savedLanguage);
-        };
+        // Sayfayı yükledikten sonra dropdown'un ilk değerini ayarla
+        window.addEventListener('load', function() {
+            document.getElementById('languageDropdown').value = 'en';
+            changeLanguage('en');
+        });
     </script>
 </body>
 
