@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parking Spot Application - Privacy Policy</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            padding: 10px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        h2 {
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 10px;
+        }
+
+        h3 {
+            margin-top: 20px;
+        }
+
+        a {
+            color: #007BFF;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        em {
+            font-style: italic;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Parking Spot Application - Privacy Policy</h1>
+    <p><em>Last updated: August 1, 2023</em></p>
+    <p>
+        This privacy policy ("Policy") explains how ["Parking Spot"] (referred to as "Application" or "We") collects,
+        uses, and discloses information about users of the mobile application. The Application allows users to record and
+        manage their vehicle parking spots. Please read this Policy carefully to understand our practices. By using the
+        Application, you consent to the terms of this Policy.
+    </p>
+
+    <h2>1. Collected Information</h2>
+    <p>
+        The Application only uses GPS or other location data to accurately record vehicle parking spots. We do not collect,
+        store, or request personal account information from our users.
+    </p>
+
+    <h2>2. Google AdMob Ads</h2>
+    <p>
+        The Parking Spot Application may use Google AdMob ads to support and offer it for free. Google AdMob may collect
+        information such as your device's advertising identifier, location data, or other data for ad targeting purposes to
+        deliver more relevant and engaging ads. This information may be used to customize the content of the ads based on
+        your interests.
+    </p>
+
+    <h3>Ads Suitable for Children</h3>
+    <p>
+        The ads displayed in the Parking Spot Application will not be targeted for children. Ad contents obtained from
+        ad providers are selected and delivered in a manner that protects children's privacy and safety, aiming to provide a
+        safe experience for child users.
+    </p>
+
+    <h3>Ad Categories</h3>
+    <p>
+        To ensure user safety and privacy, specific ad categories containing inappropriate content for children will not be
+        shown or presented within the Application.
+    </p>
+
+    <h2>3. Security</h2>
+    <p>
+        The Application takes appropriate technical and administrative measures to protect user information. However, please
+        note that no internet-based service can guarantee absolute security. Users are also advised to use a strong and unique
+        password to protect their personal information.
+    </p>
+
+    <h2>4. Children's Privacy</h2>
+    <p>
+        The Application does not intentionally collect personal information from children under 13 years of age. If you are
+        a parent or guardian and believe that your child under 13 has provided us with personal information, please contact us,
+        and we will promptly delete such information.
+    </p>
+
+    <h2>5. Other Links</h2>
+    <p>
+        Our Application may contain links to other websites or applications. However, we are not responsible for the
+        information sharing practices or contents of these linked sites. We recommend being cautious and reading the privacy
+        policies of visited websites.
+    </p>
+
+    <h2>6. Changes to the Privacy Policy</h2>
+    <p>
+        This Policy may be updated from time to time due to changes in Application functionality or legal requirements. We will
+        use appropriate means to notify you of these changes. Please check our Policy regularly for updates.
+    </p>
+
+    <h2>7. Contact</h2>
+    <p>
+        For any questions or inquiries about this privacy policy or our privacy practices, please contact us at
+        <a href="mailto:info.oguzhanyildirim@gmail.com">info.oguzhanyildirim@gmail.com</a>.
+    </p>
+
+    <p>
+        This privacy policy is prepared to protect the privacy and security of our users. Our Application uses collected data
+        solely to accurately record vehicle parking spots and enhance user experience. We prioritize user safety by providing
+        suitable and secure ads. We may update this privacy policy occasionally to inform you of any changes, so please check
+        it regularly. Feel free to contact us if you have any questions or concerns about privacy.
+    </p>
+
+    <p>
+        Thank you for reading this privacy policy, and we hope you enjoy a pleasant and safe experience while using the Park
+        Noktası Application.
+    </p>
+</body>
+
+</html>
