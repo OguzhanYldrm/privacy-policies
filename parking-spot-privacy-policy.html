@@ -40,90 +40,445 @@
         em {
             font-style: italic;
         }
+
+        .language-selector {
+            text-align: center;
+            margin-bottom: 20px;
+            padding: 15px;
+            background-color: #f5f5f5;
+            border-radius: 5px;
+        }
+
+        .language-selector label {
+            margin-right: 10px;
+            font-weight: bold;
+        }
+
+        .language-selector select {
+            padding: 8px 12px;
+            font-size: 14px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            cursor: pointer;
+        }
     </style>
 </head>
 
 <body>
-    <h1>Parking Spot Application - Privacy Policy</h1>
-    <p><em>Last updated: August 1, 2023</em></p>
-    <p>
+    <div class="language-selector">
+        <label for="languageDropdown">Select Language / Dil Seçin:</label>
+        <select id="languageDropdown" onchange="changeLanguage(this.value)">
+            <option value="en">English</option>
+            <option value="tr">Türkçe</option>
+            <option value="ar">العربية</option>
+            <option value="de">Deutsch</option>
+            <option value="fr">Français</option>
+            <option value="it">Italiano</option>
+            <option value="es">Español</option>
+            <option value="ja">日本語</option>
+            <option value="ko">한국어</option>
+            <option value="pt">Português</option>
+            <option value="zh">中文</option>
+        </select>
+    </div>
+
+    <h1 id="title">Parking Spot Application - Privacy Policy</h1>
+    <p id="lastUpdated"><em>Last updated: August 1, 2023</em></p>
+    <p id="intro">
         This privacy policy ("Policy") explains how ["Parking Spot"] (referred to as "Application" or "We") collects,
         uses, and discloses information about users of the mobile application. The Application allows users to record and
         manage their vehicle parking spots. Please read this Policy carefully to understand our practices. By using the
         Application, you consent to the terms of this Policy.
     </p>
 
-    <h2>1. Collected Information</h2>
-    <p>
+    <h2 id="section1Title">1. Collected Information</h2>
+    <p id="section1">
         The Application only uses GPS or other location data to accurately record vehicle parking spots. We do not collect,
         store, or request personal account information from our users.
     </p>
 
-    <h2>2. Google AdMob Ads</h2>
-    <p>
+    <h2 id="section2Title">2. Google AdMob Ads</h2>
+    <p id="section2">
         The Parking Spot Application may use Google AdMob ads to support and offer it for free. Google AdMob may collect
         information such as your device's advertising identifier, location data, or other data for ad targeting purposes to
         deliver more relevant and engaging ads. This information may be used to customize the content of the ads based on
         your interests.
     </p>
 
-    <h3>Ads Suitable for Children</h3>
-    <p>
+    <h3 id="adsChildrenTitle">Ads Suitable for Children</h3>
+    <p id="adsChildren">
         The ads displayed in the Parking Spot Application will not be targeted for children. Ad contents obtained from
         ad providers are selected and delivered in a manner that protects children's privacy and safety, aiming to provide a
         safe experience for child users.
     </p>
 
-    <h3>Ad Categories</h3>
-    <p>
+    <h3 id="adsCategoriesTitle">Ad Categories</h3>
+    <p id="adsCategories">
         To ensure user safety and privacy, specific ad categories containing inappropriate content for children will not be
         shown or presented within the Application.
     </p>
 
-    <h2>3. Security</h2>
-    <p>
+    <h2 id="section3Title">3. Security</h2>
+    <p id="section3">
         The Application takes appropriate technical and administrative measures to protect user information. However, please
         note that no internet-based service can guarantee absolute security. Users are also advised to use a strong and unique
         password to protect their personal information.
     </p>
 
-    <h2>4. Children's Privacy</h2>
-    <p>
+    <h2 id="section4Title">4. Children's Privacy</h2>
+    <p id="section4">
         The Application does not intentionally collect personal information from children under 13 years of age. If you are
         a parent or guardian and believe that your child under 13 has provided us with personal information, please contact us,
         and we will promptly delete such information.
     </p>
 
-    <h2>5. Other Links</h2>
-    <p>
+    <h2 id="section5Title">5. Other Links</h2>
+    <p id="section5">
         Our Application may contain links to other websites or applications. However, we are not responsible for the
         information sharing practices or contents of these linked sites. We recommend being cautious and reading the privacy
         policies of visited websites.
     </p>
 
-    <h2>6. Changes to the Privacy Policy</h2>
-    <p>
+    <h2 id="section6Title">6. Changes to the Privacy Policy</h2>
+    <p id="section6">
         This Policy may be updated from time to time due to changes in Application functionality or legal requirements. We will
         use appropriate means to notify you of these changes. Please check our Policy regularly for updates.
     </p>
 
-    <h2>7. Contact</h2>
-    <p>
+    <h2 id="section7Title">7. Contact</h2>
+    <p id="section7">
         For any questions or inquiries about this privacy policy or our privacy practices, please contact us at
         <a href="mailto:info.oguzhanyildirim@gmail.com">info.oguzhanyildirim@gmail.com</a>.
     </p>
 
-    <p>
+    <p id="closing1">
         This privacy policy is prepared to protect the privacy and security of our users. Our Application uses collected data
         solely to accurately record vehicle parking spots and enhance user experience. We prioritize user safety by providing
         suitable and secure ads. We may update this privacy policy occasionally to inform you of any changes, so please check
         it regularly. Feel free to contact us if you have any questions or concerns about privacy.
     </p>
 
-    <p>
+    <p id="closing2">
         Thank you for reading this privacy policy, and we hope you enjoy a pleasant and safe experience while using the Park
         Noktası Application.
     </p>
+
+    <script>
+        const translations = {
+            en: {
+                title: "Parking Spot Application - Privacy Policy",
+                lastUpdated: "Last updated: August 1, 2023",
+                intro: "This privacy policy (\"Policy\") explains how [\"Parking Spot\"] (referred to as \"Application\" or \"We\") collects, uses, and discloses information about users of the mobile application. The Application allows users to record and manage their vehicle parking spots. Please read this Policy carefully to understand our practices. By using the Application, you consent to the terms of this Policy.",
+                section1Title: "1. Collected Information",
+                section1: "The Application only uses GPS or other location data to accurately record vehicle parking spots. We do not collect, store, or request personal account information from our users.",
+                section2Title: "2. Google AdMob Ads",
+                section2: "The Parking Spot Application may use Google AdMob ads to support and offer it for free. Google AdMob may collect information such as your device's advertising identifier, location data, or other data for ad targeting purposes to deliver more relevant and engaging ads. This information may be used to customize the content of the ads based on your interests.",
+                adsChildrenTitle: "Ads Suitable for Children",
+                adsChildren: "The ads displayed in the Parking Spot Application will not be targeted for children. Ad contents obtained from ad providers are selected and delivered in a manner that protects children's privacy and safety, aiming to provide a safe experience for child users.",
+                adsCategoriesTitle: "Ad Categories",
+                adsCategories: "To ensure user safety and privacy, specific ad categories containing inappropriate content for children will not be shown or presented within the Application.",
+                section3Title: "3. Security",
+                section3: "The Application takes appropriate technical and administrative measures to protect user information. However, please note that no internet-based service can guarantee absolute security. Users are also advised to use a strong and unique password to protect their personal information.",
+                section4Title: "4. Children's Privacy",
+                section4: "The Application does not intentionally collect personal information from children under 13 years of age. If you are a parent or guardian and believe that your child under 13 has provided us with personal information, please contact us, and we will promptly delete such information.",
+                section5Title: "5. Other Links",
+                section5: "Our Application may contain links to other websites or applications. However, we are not responsible for the information sharing practices or contents of these linked sites. We recommend being cautious and reading the privacy policies of visited websites.",
+                section6Title: "6. Changes to the Privacy Policy",
+                section6: "This Policy may be updated from time to time due to changes in Application functionality or legal requirements. We will use appropriate means to notify you of these changes. Please check our Policy regularly for updates.",
+                section7Title: "7. Contact",
+                section7: "For any questions or inquiries about this privacy policy or our privacy practices, please contact us at info.oguzhanyildirim@gmail.com.",
+                closing1: "This privacy policy is prepared to protect the privacy and security of our users. Our Application uses collected data solely to accurately record vehicle parking spots and enhance user experience. We prioritize user safety by providing suitable and secure ads. We may update this privacy policy occasionally to inform you of any changes, so please check it regularly. Feel free to contact us if you have any questions or concerns about privacy.",
+                closing2: "Thank you for reading this privacy policy, and we hope you enjoy a pleasant and safe experience while using the Park Noktası Application."
+            },
+            tr: {
+                title: "Park Yeri Uygulaması - Gizlilik Politikası",
+                lastUpdated: "Son güncelleme: 1 Ağustos 2023",
+                intro: "Bu gizlilik politikası (\"Politika\"), [\"Park Yeri\"] uygulamasının (\"Uygulama\" veya \"Biz\" olarak anılır) mobil uygulama kullanıcılarının bilgilerini nasıl topladığını, kullandığını ve açıkladığını açıklar. Uygulama, kullanıcıların araç park yerleri kaydedip yönetmelerine olanak tanır. Bu Politikayı dikkatle okuyarak uygulamalarımızı anlamanız rica olunur. Uygulamayı kullanarak bu Politika şartlarını kabul etmiş olursunuz.",
+                section1Title: "1. Toplanan Bilgiler",
+                section1: "Uygulama, araç park yerlerini doğru bir şekilde kaydetmek için yalnızca GPS veya diğer konum verilerini kullanır. Kullanıcılarımızdan kişisel hesap bilgileri toplamıyoruz, saklamıyoruz veya talep etmiyoruz.",
+                section2Title: "2. Google AdMob Reklamları",
+                section2: "Park Yeri Uygulaması, ücretsiz sunmak ve desteklemek için Google AdMob reklamlarını kullanabilir. Google AdMob, cihazınızın reklam tanımlayıcısı, konum verisi veya diğer veriler gibi bilgileri daha alakalı ve ilgi çekici reklamlar sunmak amacıyla reklam hedeflemesi için toplayabilir. Bu bilgiler, reklamların içeriğini ilgi alanlarınıza göre özelleştirmek için kullanılabilir.",
+                adsChildrenTitle: "Çocuklara Uygun Reklamlar",
+                adsChildren: "Park Yeri Uygulamasında gösterilen reklamlar çocuklara yönelik hedeflenmiş olmayacaktır. Reklam sağlayıcılarından alınan reklam içerikleri, çocukların gizliliğini ve güvenliğini koruyacak şekilde seçilir ve sunulur; bu sayede çocuk kullanıcılar için güvenli bir deneyim sağlanması amaçlanır.",
+                adsCategoriesTitle: "Reklam Kategorileri",
+                adsCategories: "Kullanıcı güvenliği ve gizliliğini sağlamak için, çocuklar için uygunsuz içeriği içeren belirli reklam kategorileri Uygulama içinde gösterilmeyecek veya sunulmayacaktır.",
+                section3Title: "3. Güvenlik",
+                section3: "Uygulama, kullanıcı bilgilerini korumak için uygun teknik ve idari önlemler alır. Ancak, internet tabanlı hiçbir hizmetin mutlak güvenliği garantileyemeyeceğini lütfen unutmayın. Kullanıcıların kişisel bilgilerini korumak için güçlü ve benzersiz bir şifre kullanmaları da tavsiye edilir.",
+                section4Title: "4. Çocukların Gizliliği",
+                section4: "Uygulama, 13 yaşın altındaki çocuklardan kasten kişisel bilgi toplamaz. Ebeveyn veya vasi iseniz ve 13 yaşın altındaki çocuğunuzun bize kişisel bilgi sağladığını düşünüyorsanız, lütfen bizimle iletişime geçin ve biz bu bilgileri derhal silip kaldıracağız.",
+                section5Title: "5. Diğer Bağlantılar",
+                section5: "Uygulamalarımız diğer web siteleri veya uygulamalara bağlantılar içerebilir. Ancak, bu bağlantılı sitelerin bilgi paylaşım uygulamaları veya içeriğinden sorumlu değiliz. Dikkatli olmanız ve ziyaret ettiğiniz web sitelerinin gizlilik politikalarını okumanız önerilir.",
+                section6Title: "6. Gizlilik Politikasında Değişiklikler",
+                section6: "Bu Politika, Uygulama işlevselliğindeki değişiklikler veya yasal gereklilikler nedeniyle zaman zaman güncellenebilir. Bu değişiklikleri size bildirmek için uygun araçları kullanacağız. Lütfen güncellemeler için Politikamızı düzenli olarak kontrol edin.",
+                section7Title: "7. İletişim",
+                section7: "Bu gizlilik politikası veya gizlilik uygulamalarımız hakkında herhangi bir sorunuz veya talebiniz için lütfen info.oguzhanyildirim@gmail.com adresinden bize ulaşın.",
+                closing1: "Bu gizlilik politikası, kullanıcılarımızın gizliliğini ve güvenliğini korumak için hazırlanmıştır. Uygulamalarımız toplanan verileri yalnızca araç park yerlerini doğru bir şekilde kaydetmek ve kullanıcı deneyimini iyileştirmek için kullanır. Uygun ve güvenli reklamlar sunarak kullanıcı güvenliğini öncelik verdik. Bu gizlilik politikasını zaman zaman güncelleyebiliriz; lütfen düzenli olarak kontrol edin. Gizlilik hakkında herhangi bir sorunuz veya endişeniz varsa bizimle iletişime geçmekten çekinmeyin.",
+                closing2: "Bu gizlilik politikasını okuduğunuz için teşekkür ederiz ve Park Yeri Uygulamasını kullanırken keyifli ve güvenli bir deneyim yaşamanızı umuyoruz."
+            },
+            ar: {
+                title: "تطبيق موقف السيارات - سياسة الخصوصية",
+                lastUpdated: "آخر تحديث: 1 أغسطس 2023",
+                intro: "توضح سياسة الخصوصية هذه (\"السياسة\") كيف يقوم تطبيق [\"موقف السيارات\"] (المشار إليه باسم \"التطبيق\" أو \"نحن\") بجمع واستخدام والإفصاح عن معلومات مستخدمي التطبيق المحمول. يسمح التطبيق للمستخدمين بتسجيل وإدارة مواقف السيارات الخاصة بهم. يرجى قراءة هذه السياسة بعناية لفهم ممارساتنا. باستخدام التطبيق، فإنك توافق على شروط هذه السياسة.",
+                section1Title: "1. المعلومات المجمعة",
+                section1: "يستخدم التطبيق فقط بيانات GPS أو بيانات الموقع الأخرى لتسجيل مواقف السيارات بدقة. لا نقوم بجمع أو تخزين أو طلب معلومات الحساب الشخصية من المستخدمين لدينا.",
+                section2Title: "2. إعلانات Google AdMob",
+                section2: "قد يستخدم تطبيق موقف السيارات إعلانات Google AdMob لدعمه وتقديمه مجانًا. قد يجمع Google AdMob معلومات مثل معرّف الإعلانات على جهازك أو بيانات الموقع أو بيانات أخرى لأغراض استهداف الإعلانات لتقديم إعلانات أكثر صلة وجاذبية. قد تُستخدم هذه المعلومات لتخصيص محتوى الإعلانات بناءً على اهتماماتك.",
+                adsChildrenTitle: "الإعلانات المناسبة للأطفال",
+                adsChildren: "لن تكون الإعلانات المعروضة في تطبيق موقف السيارات موجهة للأطفال. يتم اختيار محتويات الإعلانات التي تحصل عليها من موفري الإعلانات وتسليمها بطريقة تحمي خصوصية وسلامة الأطفال، بهدف توفير تجربة آمنة لمستخدمي الأطفال.",
+                adsCategoriesTitle: "فئات الإعلانات",
+                adsCategories: "لضمان سلامة وخصوصية المستخدم، لن يتم عرض أو تقديم فئات إعلانية محددة تحتوي على محتوى غير مناسب للأطفال داخل التطبيق.",
+                section3Title: "3. الأمان",
+                section3: "يتخذ التطبيق التدابير التقنية والإدارية المناسبة لحماية معلومات المستخدم. ومع ذلك، يرجى ملاحظة أنه لا يمكن لأي خدمة قائمة على الإنترنت أن تضمن الأمان المطلق. يُنصح المستخدمون أيضًا باستخدام كلمة مرور قوية وفريدة لحماية معلوماتهم الشخصية.",
+                section4Title: "4. خصوصية الأطفال",
+                section4: "لا يقوم التطبيق بجمع معلومات شخصية من الأطفال دون سن 13 سنة عن قصد. إذا كنت ولياً أو وصياً وتعتقد أن طفلك دون سن 13 سنة قدم لنا معلومات شخصية، يرجى الاتصال بنا، وسنقوم بحذف هذه المعلومات على الفور.",
+                section5Title: "5. روابط أخرى",
+                section5: "قد يحتوي تطبيقنا على روابط لمواقع ويب أو تطبيقات أخرى. ومع ذلك، نحن لسنا مسؤولين عن ممارسات مشاركة المعلومات أو محتويات هذه المواقع المرتبطة. نوصيك بتوخي الحذر وقراءة سياسات الخصوصية للمواقع التي تزورها.",
+                section6Title: "6. التغييرات على سياسة الخصوصية",
+                section6: "قد يتم تحديث هذه السياسة من وقت لآخر بسبب التغييرات في وظائف التطبيق أو المتطلبات القانونية. سوف نستخدم الوسائل المناسبة لإخطارك بهذه التغييرات. يرجى التحقق من سياستنا بانتظام للحصول على التحديثات.",
+                section7Title: "7. اتصل",
+                section7: "لأي أسئلة أو استفسارات حول سياسة الخصوصية هذه أو ممارسات الخصوصية الخاصة بنا، يرجى الاتصال بنا على info.oguzhanyildirim@gmail.com.",
+                closing1: "تم إعداد سياسة الخصوصية هذه لحماية خصوصية وأمان مستخدمينا. يستخدم تطبيقنا البيانات المجمعة فقط لتسجيل مواقف السيارات بدقة وتحسين تجربة المستخدم. نحن نعطي الأولوية لسلامة المستخدم من خلال توفير إعلانات مناسبة وآمنة. قد نقوم بتحديث سياسة الخصوصية هذه من وقت لآخر لإخطارك بأي تغييرات، لذا يرجى التحقق منها بانتظام. لا تتردد في الاتصال بنا إذا كان لديك أي أسئلة أو مخاوف بشأن الخصوصية.",
+                closing2: "شكرًا لك على قراءة سياسة الخصوصية هذه، ونأمل أن تستمتع بتجربة ممتعة وآمنة أثناء استخدام تطبيق موقف السيارات."
+            },
+            de: {
+                title: "Parkplatz-Anwendung - Datenschutzrichtlinie",
+                lastUpdated: "Zuletzt aktualisiert: 1. August 2023",
+                intro: "Diese Datenschutzrichtlinie (\"Richtlinie\") erläutert, wie die Anwendung [\"Parkplatz\"] (im Folgenden \"Anwendung\" oder \"Wir\" genannt) Informationen von Benutzern der mobilen Anwendung erfasst, verwendet und offenlegt. Die Anwendung ermöglicht es Benutzern, ihre Parkplätze zu erfassen und zu verwalten. Bitte lesen Sie diese Richtlinie sorgfältig, um unsere Praktiken zu verstehen. Durch die Nutzung der Anwendung stimmen Sie den Bedingungen dieser Richtlinie zu.",
+                section1Title: "1. Erfasste Informationen",
+                section1: "Die Anwendung verwendet nur GPS oder andere Standortdaten, um Parkplätze genau zu erfassen. Wir erfassen, speichern oder fordern keine persönlichen Kontoinformationen von unseren Benutzern an.",
+                section2Title: "2. Google AdMob-Anzeigen",
+                section2: "Die Parkplatz-Anwendung kann Google AdMob-Anzeigen verwenden, um sie kostenlos zu unterstützen und anzubieten. Google AdMob kann Informationen wie die Werbe-ID Ihres Geräts, Standortdaten oder andere Daten zu Anzeigen-Targeting-Zwecken erfassen, um relevantere und ansprechendere Anzeigen bereitzustellen. Diese Informationen können verwendet werden, um den Inhalt der Anzeigen auf der Grundlage Ihrer Interessen anzupassen.",
+                adsChildrenTitle: "Für Kinder geeignete Anzeigen",
+                adsChildren: "Die in der Parkplatz-Anwendung angezeigten Anzeigen sind nicht auf Kinder ausgerichtet. Anzeigeninhalte, die von Anzeigenanbietern bezogen werden, werden so ausgewählt und bereitgestellt, dass die Privatsphäre und Sicherheit von Kindern geschützt werden, um eine sichere Erfahrung für Kindbenutzer zu bieten.",
+                adsCategoriesTitle: "Anzeigenkategorien",
+                adsCategories: "Um die Sicherheit und den Datenschutz der Benutzer zu gewährleisten, werden bestimmte Anzeigenkategorien mit unangemessenem Inhalt für Kinder nicht in der Anwendung angezeigt oder dargestellt.",
+                section3Title: "3. Sicherheit",
+                section3: "Die Anwendung ergreift angemessene technische und administrative Maßnahmen zum Schutz von Benutzerinformationen. Bitte beachten Sie jedoch, dass kein internetbasierter Dienst absolute Sicherheit garantieren kann. Benutzer werden auch empfohlen, ein starkes und eindeutiges Passwort zu verwenden, um ihre persönlichen Informationen zu schützen.",
+                section4Title: "4. Datenschutz der Kinder",
+                section4: "Die Anwendung erfasst nicht absichtlich persönliche Informationen von Kindern unter 13 Jahren. Wenn Sie ein Elternteil oder Erziehungsberechtigter sind und glauben, dass Ihr Kind unter 13 Jahren uns persönliche Informationen zur Verfügung gestellt hat, kontaktieren Sie uns bitte, und wir werden diese Informationen umgehend löschen.",
+                section5Title: "5. Andere Links",
+                section5: "Unsere Anwendung kann Links zu anderen Websites oder Anwendungen enthalten. Wir sind jedoch nicht verantwortlich für die Informationsfreigabepraktiken oder Inhalte dieser verlinkten Websites. Wir empfehlen Ihnen, vorsichtig zu sein und die Datenschutzrichtlinien der besuchten Websites zu lesen.",
+                section6Title: "6. Änderungen der Datenschutzrichtlinie",
+                section6: "Diese Richtlinie kann von Zeit zu Zeit aufgrund von Änderungen der Anwendungsfunktionalität oder rechtlicher Anforderungen aktualisiert werden. Wir werden angemessene Mittel nutzen, um Sie über diese Änderungen zu benachrichtigen. Bitte überprüfen Sie unsere Richtlinie regelmäßig auf Aktualisierungen.",
+                section7Title: "7. Kontakt",
+                section7: "Bei Fragen oder Anfragen zu dieser Datenschutzrichtlinie oder unseren Datenschutzpraktiken kontaktieren Sie uns bitte unter info.oguzhanyildirim@gmail.com.",
+                closing1: "Diese Datenschutzrichtlinie wurde zum Schutz der Privatsphäre und Sicherheit unserer Benutzer erstellt. Unsere Anwendung verwendet erfasste Daten ausschließlich zur genauen Erfassung von Parkplätzen und zur Verbesserung der Benutzererfahrung. Wir priorisieren die Benutzersicherheit durch die Bereitstellung geeigneter und sicherer Anzeigen. Wir können diese Datenschutzrichtlinie gelegentlich aktualisieren, um Sie über Änderungen zu informieren. Bitte überprüfen Sie sie regelmäßig. Wenden Sie sich gerne an uns, wenn Sie Fragen oder Bedenken zum Datenschutz haben.",
+                closing2: "Vielen Dank, dass Sie diese Datenschutzrichtlinie gelesen haben. Wir hoffen, dass Sie beim Verwenden der Parkplatz-Anwendung eine angenehme und sichere Erfahrung machen."
+            },
+            fr: {
+                title: "Application de Stationnement - Politique de Confidentialité",
+                lastUpdated: "Dernière mise à jour : 1er août 2023",
+                intro: "Cette politique de confidentialité (\"Politique\") explique comment l'application [\"Stationnement\"] (désignée par \"Application\" ou \"Nous\") collecte, utilise et divulgue les informations des utilisateurs de l'application mobile. L'application permet aux utilisateurs d'enregistrer et de gérer leurs places de stationnement. Veuillez lire cette politique attentivement pour comprendre nos pratiques. En utilisant l'application, vous acceptez les termes de cette politique.",
+                section1Title: "1. Informations Collectées",
+                section1: "L'application utilise uniquement les données GPS ou autres données de localisation pour enregistrer avec précision les places de stationnement. Nous ne collectons, ne stockons ni ne demandons d'informations de compte personnel auprès de nos utilisateurs.",
+                section2Title: "2. Publicités Google AdMob",
+                section2: "L'application de stationnement peut utiliser les publicités Google AdMob pour la soutenir et l'offrir gratuitement. Google AdMob peut collecter des informations telles que l'identifiant publicitaire de votre appareil, les données de localisation ou autres données à des fins de ciblage publicitaire pour diffuser des publicités plus pertinentes et engageantes. Ces informations peuvent être utilisées pour personnaliser le contenu des publicités en fonction de vos intérêts.",
+                adsChildrenTitle: "Publicités Adaptées aux Enfants",
+                adsChildren: "Les publicités affichées dans l'application de stationnement ne seront pas ciblées pour les enfants. Les contenus publicitaires provenant de fournisseurs de publicités sont sélectionnés et diffusés de manière à protéger la confidentialité et la sécurité des enfants, visant à offrir une expérience sûre aux utilisateurs enfants.",
+                adsCategoriesTitle: "Catégories de Publicités",
+                adsCategories: "Pour assurer la sécurité et la confidentialité des utilisateurs, les catégories de publicités spécifiques contenant des contenus inappropriés pour les enfants ne seront pas affichées ou présentées au sein de l'application.",
+                section3Title: "3. Sécurité",
+                section3: "L'application prend des mesures techniques et administratives appropriées pour protéger les informations des utilisateurs. Cependant, veuillez noter qu'aucun service basé sur Internet ne peut garantir une sécurité absolue. Les utilisateurs sont également invités à utiliser un mot de passe fort et unique pour protéger leurs informations personnelles.",
+                section4Title: "4. Confidentialité des Enfants",
+                section4: "L'application ne collecte pas intentionnellement d'informations personnelles auprès des enfants de moins de 13 ans. Si vous êtes un parent ou un tuteur et que vous croyez que votre enfant de moins de 13 ans nous a fourni des informations personnelles, veuillez nous contacter et nous supprimerons ces informations rapidement.",
+                section5Title: "5. Autres Liens",
+                section5: "Notre application peut contenir des liens vers d'autres sites Web ou applications. Cependant, nous ne sommes pas responsables des pratiques de partage d'informations ou des contenus de ces sites liés. Nous vous recommandons de faire preuve de prudence et de lire les politiques de confidentialité des sites Web que vous visitez.",
+                section6Title: "6. Modifications de la Politique de Confidentialité",
+                section6: "Cette politique peut être mise à jour de temps à autre en raison de modifications de la fonctionnalité de l'application ou des exigences légales. Nous utiliserons les moyens appropriés pour vous informer de ces modifications. Veuillez vérifier régulièrement notre politique pour les mises à jour.",
+                section7Title: "7. Contact",
+                section7: "Pour toute question ou demande concernant cette politique de confidentialité ou nos pratiques en matière de confidentialité, veuillez nous contacter à info.oguzhanyildirim@gmail.com.",
+                closing1: "Cette politique de confidentialité a été préparée pour protéger la confidentialité et la sécurité de nos utilisateurs. Notre application utilise les données collectées uniquement pour enregistrer avec précision les places de stationnement des véhicules et améliorer l'expérience utilisateur. Nous donnons la priorité à la sécurité des utilisateurs en fournissant des publicités appropriées et sûres. Nous pouvons mettre à jour cette politique de confidentialité occasionnellement pour vous informer de tout changement, veuillez donc la vérifier régulièrement. N'hésitez pas à nous contacter si vous avez des questions ou des préoccupations concernant la confidentialité.",
+                closing2: "Merci d'avoir lu cette politique de confidentialité, et nous espérons que vous profiterez d'une expérience agréable et sûre lors de l'utilisation de l'application de stationnement."
+            },
+            it: {
+                title: "Applicazione Parcheggio - Politica sulla Privacy",
+                lastUpdated: "Ultimo aggiornamento: 1 agosto 2023",
+                intro: "Questa politica sulla privacy (\"Politica\") spiega come l'applicazione [\"Parcheggio\"] (denominata \"Applicazione\" o \"Noi\") raccoglie, utilizza e divulga le informazioni degli utenti dell'applicazione mobile. L'applicazione consente agli utenti di registrare e gestire i loro posti auto. Si prega di leggere attentamente questa Politica per comprendere le nostre pratiche. Utilizzando l'Applicazione, accetti i termini di questa Politica.",
+                section1Title: "1. Informazioni Raccolte",
+                section1: "L'Applicazione utilizza solo i dati GPS o altri dati di localizzazione per registrare accuratamente i posti auto. Non raccogliamo, conserviamo o chiediamo informazioni personali dell'account ai nostri utenti.",
+                section2Title: "2. Annunci Google AdMob",
+                section2: "L'Applicazione Parcheggio può utilizzare annunci Google AdMob per supportarla e offrirla gratuitamente. Google AdMob potrebbe raccogliere informazioni come l'identificativo pubblicitario del dispositivo, dati sulla posizione o altri dati a scopo di targeting degli annunci per fornire annunci più rilevanti e coinvolgenti. Queste informazioni possono essere utilizzate per personalizzare il contenuto degli annunci in base ai tuoi interessi.",
+                adsChildrenTitle: "Annunci Adatti ai Bambini",
+                adsChildren: "Gli annunci visualizzati nell'Applicazione Parcheggio non saranno mirati ai bambini. I contenuti degli annunci ottenuti dai fornitori di annunci vengono selezionati e consegnati in modo da proteggere la privacy e la sicurezza dei bambini, al fine di fornire un'esperienza sicura per gli utenti bambini.",
+                adsCategoriesTitle: "Categorie di Annunci",
+                adsCategories: "Per garantire la sicurezza e la privacy dell'utente, specifiche categorie di annunci contenenti contenuti inappropriati per i bambini non verranno visualizzate o presentate all'interno dell'Applicazione.",
+                section3Title: "3. Sicurezza",
+                section3: "L'Applicazione adotta misure tecniche e amministrative appropriate per proteggere le informazioni degli utenti. Tuttavia, tieni presente che nessun servizio basato su Internet può garantire una sicurezza assoluta. Agli utenti è anche consigliato di utilizzare una password forte e univoca per proteggere le loro informazioni personali.",
+                section4Title: "4. Privacy dei Bambini",
+                section4: "L'Applicazione non raccoglie intenzionalmente informazioni personali da bambini di età inferiore ai 13 anni. Se sei un genitore o un tutore e ritieni che tuo figlio di età inferiore ai 13 anni ci abbia fornito informazioni personali, contattaci e elimineremo prontamente tali informazioni.",
+                section5Title: "5. Altri Link",
+                section5: "La nostra Applicazione potrebbe contenere link a siti Web o applicazioni di terze parti. Tuttavia, non siamo responsabili delle pratiche di condivisione delle informazioni o dei contenuti di questi siti collegati. Ti consigliamo di essere cauto e di leggere le politiche sulla privacy dei siti Web che visiti.",
+                section6Title: "6. Modifiche alla Politica sulla Privacy",
+                section6: "Questa Politica potrebbe essere aggiornata di tanto in tanto a causa di modifiche alle funzionalità dell'Applicazione o ai requisiti legali. Utilizzeremo i mezzi appropriati per notificarti di questi cambiamenti. Si prega di verificare regolarmente la nostra Politica per gli aggiornamenti.",
+                section7Title: "7. Contatti",
+                section7: "Per qualsiasi domanda o richiesta riguardante questa politica sulla privacy o le nostre pratiche sulla privacy, contattaci a info.oguzhanyildirim@gmail.com.",
+                closing1: "Questa politica sulla privacy è stata redatta per proteggere la privacy e la sicurezza dei nostri utenti. La nostra Applicazione utilizza i dati raccolti esclusivamente per registrare con precisione i posti auto dei veicoli e migliorare l'esperienza dell'utente. Diamo priorità alla sicurezza dell'utente fornendo annunci appropriati e sicuri. Potremmo aggiornare questa politica sulla privacy occasionalmente per informarti di eventuali modifiche, quindi controlla regolarmente. Sentiti libero di contattarci se hai domande o dubbi sulla privacy.",
+                closing2: "Grazie per aver letto questa politica sulla privacy, e speriamo di fornirti un'esperienza piacevole e sicura mentre utilizzi l'Applicazione Parcheggio."
+            },
+            es: {
+                title: "Aplicación de Aparcamiento - Política de Privacidad",
+                lastUpdated: "Última actualización: 1 de agosto de 2023",
+                intro: "Esta política de privacidad (\"Política\") explica cómo la aplicación [\"Aparcamiento\"] (denominada \"Aplicación\" o \"Nosotros\") recopila, utiliza y divulga información sobre usuarios de la aplicación móvil. La aplicación permite a los usuarios registrar y gestionar sus lugares de estacionamiento de vehículos. Por favor, lea esta Política cuidadosamente para entender nuestras prácticas. Al usar la Aplicación, usted acepta los términos de esta Política.",
+                section1Title: "1. Información Recopilada",
+                section1: "La Aplicación solo utiliza datos de GPS u otros datos de ubicación para registrar con precisión los lugares de estacionamiento de vehículos. No recopilamos, almacenamos ni solicitamos información personal de la cuenta a nuestros usuarios.",
+                section2Title: "2. Anuncios de Google AdMob",
+                section2: "La Aplicación de Aparcamiento puede utilizar anuncios de Google AdMob para apoyarla y ofrecerla de forma gratuita. Google AdMob puede recopilar información como el identificador de publicidad de su dispositivo, datos de ubicación u otros datos para fines de orientación de anuncios para entregar anuncios más relevantes y atractivos. Esta información puede utilizarse para personalizar el contenido de los anuncios según sus intereses.",
+                adsChildrenTitle: "Anuncios Apropiados para Niños",
+                adsChildren: "Los anuncios mostrados en la Aplicación de Aparcamiento no estarán dirigidos a niños. Los contenidos de anuncios obtenidos de proveedores de anuncios se seleccionan y se entregan de manera que proteja la privacidad y seguridad de los niños, con el objetivo de proporcionar una experiencia segura para los usuarios niños.",
+                adsCategoriesTitle: "Categorías de Anuncios",
+                adsCategories: "Para garantizar la seguridad y privacidad del usuario, ciertas categorías de anuncios que contienen contenido inapropiado para niños no se mostrarán ni se presentarán dentro de la Aplicación.",
+                section3Title: "3. Seguridad",
+                section3: "La Aplicación toma medidas técnicas y administrativas apropiadas para proteger la información del usuario. Sin embargo, tenga en cuenta que ningún servicio basado en Internet puede garantizar una seguridad absoluta. También se recomienda a los usuarios que utilicen una contraseña fuerte y única para proteger su información personal.",
+                section4Title: "4. Privacidad de los Niños",
+                section4: "La Aplicación no recopila información personal de menores de 13 años de manera intencional. Si es padre o tutor y cree que su hijo menor de 13 años nos ha proporcionado información personal, contáctenos, y eliminaremos esa información de inmediato.",
+                section5Title: "5. Otros Enlaces",
+                section5: "Nuestra Aplicación puede contener enlaces a otros sitios web o aplicaciones. Sin embargo, no somos responsables de las prácticas de compartición de información o contenidos de estos sitios enlazados. Le recomendamos que sea cauteloso y lea las políticas de privacidad de los sitios web que visite.",
+                section6Title: "6. Cambios en la Política de Privacidad",
+                section6: "Esta Política puede actualizarse de vez en cuando debido a cambios en la funcionalidad de la Aplicación o requisitos legales. Utilizaremos medios apropiados para notificarle estos cambios. Por favor, revise nuestra Política regularmente para actualizaciones.",
+                section7Title: "7. Contacto",
+                section7: "Para cualquier pregunta o consulta sobre esta política de privacidad o nuestras prácticas de privacidad, contáctenos en info.oguzhanyildirim@gmail.com.",
+                closing1: "Esta política de privacidad se ha preparado para proteger la privacidad y seguridad de nuestros usuarios. Nuestra Aplicación utiliza los datos recopilados únicamente para registrar con precisión los lugares de estacionamiento de vehículos y mejorar la experiencia del usuario. Priorizamos la seguridad del usuario al proporcionar anuncios apropiados y seguros. Podemos actualizar esta política de privacidad ocasionalmente para informarle sobre cualquier cambio, así que revísela regularmente. Siéntase libre de contactarnos si tiene alguna pregunta o preocupación sobre privacidad.",
+                closing2: "Gracias por leer esta política de privacidad, y esperamos que disfrute de una experiencia agradable y segura al usar la Aplicación de Aparcamiento."
+            },
+            ja: {
+                title: "駐車場アプリケーション - プライバシーポリシー",
+                lastUpdated: "最終更新日：2023年8月1日",
+                intro: "このプライバシーポリシー（「ポリシー」）は、[「駐車場」]アプリケーション（「アプリケーション」または「当社」と呼ばれる）がモバイルアプリケーションのユーザーの情報をどのように収集、使用、開示するかを説明しています。アプリケーションを使用することで、このポリシーの条件に同意したことになります。",
+                section1Title: "1. 収集される情報",
+                section1: "アプリケーションはGPSまたは他の位置情報データのみを使用して、車両の駐車場を正確に記録します。当社はユーザーから個人のアカウント情報を収集、保存、または要求しません。",
+                section2Title: "2. Google AdMob広告",
+                section2: "駐車場アプリケーションは、無料でサポートおよび提供するためにGoogle AdMob広告を使用する場合があります。Google AdMobは、デバイスの広告ID、位置情報、またはその他のデータを広告ターゲティングの目的で収集して、より関連性の高い魅力的な広告を配信することができます。この情報は、あなたの興味に基づいて広告の内容をカスタマイズするために使用される場合があります。",
+                adsChildrenTitle: "子どもに適した広告",
+                adsChildren: "駐車場アプリケーションに表示される広告は、子どもを対象としません。広告プロバイダーから取得した広告コンテンツは、子どものプライバシーと安全を保護するように選択および配信され、子どもユーザーに安全な体験を提供することを目的としています。",
+                adsCategoriesTitle: "広告カテゴリ",
+                adsCategories: "ユーザーの安全とプライバシーを確保するために、子どもに不適切なコンテンツを含む特定の広告カテゴリはアプリケーション内に表示または提示されません。",
+                section3Title: "3. セキュリティ",
+                section3: "アプリケーションはユーザー情報を保護するための適切な技術的および管理的措置を講じています。ただし、インターネットベースのサービスは絶対的なセキュリティを保証することはできないことに注意してください。ユーザーはまた、個人情報を保護するために強力でユニークなパスワードを使用することをお勧めします。",
+                section4Title: "4. 子どもプライバシー",
+                section4: "アプリケーションは、13歳未満の子どもから個人情報を意図的に収集しません。親または保護者であり、13歳未満のお子さんが当社に個人情報を提供したと思われる場合は、お気軽にお問い合わせください。当社はそのような情報を直ちに削除いたします。",
+                section5Title: "5. その他のリンク",
+                section5: "当社のアプリケーションには、他のウェブサイトやアプリケーションへのリンクが含まれている場合があります。ただし、当社はこれらのリンクされたサイトの情報共有慣行またはコンテンツについて責任を負いません。訪問したウェブサイトのプライバシーポリシーを注意深く読むことをお勧めします。",
+                section6Title: "6. プライバシーポリシーの変更",
+                section6: "このポリシーは、アプリケーション機能の変更または法的要件の変更に伴い、随時更新される場合があります。当社は、これらの変更についてお知らせするための適切な手段を使用します。定期的にポリシーをご確認ください。",
+                section7Title: "7. お問い合わせ",
+                section7: "このプライバシーポリシーまたは当社のプライバシー慣行についてのご質問やお問い合わせは、info.oguzhanyildirim@gmail.comにお問い合わせください。",
+                closing1: "このプライバシーポリシーは、当社のユーザーのプライバシーとセキュリティを保護するために作成されています。当社のアプリケーションは、収集されたデータを使用して、車両の駐車場を正確に記録し、ユーザー体験を向上させるためのみに使用します。当社は、適切で安全な広告を提供することでユーザーセキュリティを優先しています。このプライバシーポリシーを随時更新してお知らせする場合がございますので、定期的にご確認ください。プライバシーについてご不明な点がございましたら、お気軽にお問い合わせください。",
+                closing2: "このプライバシーポリシーをお読みいただきありがとうございます。駐車場アプリケーションを使用される際に、楽しく安全な体験をしていただけることを願っています。"
+            },
+            ko: {
+                title: "주차 애플리케이션 - 개인정보보호정책",
+                lastUpdated: "마지막 업데이트: 2023년 8월 1일",
+                intro: "이 개인정보보호정책(\"정책\")은 [\"주차\"] 애플리케이션(\"애플리케이션\" 또는 \"당사\"로 지칭)이 모바일 애플리케이션 사용자의 정보를 어떻게 수집, 사용 및 공개하는지 설명합니다. 애플리케이션은 사용자가 자신의 주차 위치를 기록하고 관리할 수 있습니다. 이 정책을 주의 깊게 읽어 당사의 관행을 이해해 주시기 바랍니다. 애플리케이션을 사용함으로써 이 정책의 조건에 동의하는 것입니다.",
+                section1Title: "1. 수집된 정보",
+                section1: "애플리케이션은 차량의 주차 위치를 정확하게 기록하기 위해 GPS 또는 기타 위치 데이터만 사용합니다. 당사는 사용자의 개인 계정 정보를 수집, 저장 또는 요청하지 않습니다.",
+                section2Title: "2. Google AdMob 광고",
+                section2: "주차 애플리케이션은 무료로 지원하고 제공하기 위해 Google AdMob 광고를 사용할 수 있습니다. Google AdMob은 더 관련성 있고 매력적인 광고를 제공하기 위해 광고 타게팅 목적으로 기기의 광고 ID, 위치 데이터 또는 기타 데이터를 수집할 수 있습니다. 이 정보는 사용자의 관심사에 따라 광고 콘텐츠를 커스터마이징하는 데 사용될 수 있습니다.",
+                adsChildrenTitle: "어린이에게 적합한 광고",
+                adsChildren: "주차 애플리케이션에 표시되는 광고는 어린이를 대상으로 하지 않습니다. 광고 제공자로부터 얻은 광고 콘텐츠는 어린이의 개인정보 보호와 안전을 보호하는 방식으로 선택 및 제공되어 어린 사용자에게 안전한 경험을 제공하는 것을 목표로 합니다.",
+                adsCategoriesTitle: "광고 카테고리",
+                adsCategories: "사용자 안전 및 개인정보 보호를 보장하기 위해 어린이에게 부적절한 콘텐츠를 포함하는 특정 광고 카테고리는 애플리케이션 내에 표시되지 않습니다.",
+                section3Title: "3. 보안",
+                section3: "애플리케이션은 사용자 정보를 보호하기 위해 적절한 기술적 및 관리적 조치를 취합니다. 다만, 인터넷 기반 서비스는 절대적인 보안을 보장할 수 없음을 유의하십시오. 사용자는 또한 개인 정보를 보호하기 위해 강력하고 고유한 비밀번호를 사용할 것을 권고합니다.",
+                section4Title: "4. 어린이 개인정보 보호",
+                section4: "애플리케이션은 13세 미만의 어린이로부터 의도적으로 개인 정보를 수집하지 않습니다. 부모 또는 보호자이며 13세 미만의 자녀가 당사에 개인 정보를 제공했다고 생각되는 경우, 당사에 연락해 주시면 당사는 이러한 정보를 즉시 삭제하겠습니다.",
+                section5Title: "5. 기타 링크",
+                section5: "당사 애플리케이션에는 다른 웹사이트 또는 애플리케이션으로의 링크가 포함될 수 있습니다. 다만, 당사는 이러한 링크된 사이트의 정보 공유 관행이나 콘텐츠에 대해 책임지지 않습니다. 방문한 웹사이트의 개인정보보호정책을 읽을 것을 권고합니다.",
+                section6Title: "6. 개인정보보호정책 변경",
+                section6: "이 정책은 애플리케이션 기능의 변경 또는 법적 요건의 변경으로 인해 수시로 업데이트될 수 있습니다. 당사는 이러한 변경 사항을 알리기 위해 적절한 수단을 사용할 것입니다. 정기적으로 당사의 정책을 확인해 주시기 바랍니다.",
+                section7Title: "7. 연락처",
+                section7: "이 개인정보보호정책이나 당사의 개인정보보호 관행에 대한 질문이나 문의 사항은 info.oguzhanyildirim@gmail.com으로 문의해 주시기 바랍니다.",
+                closing1: "이 개인정보보호정책은 당사의 사용자의 개인정보 보호와 보안을 보호하기 위해 작성되었습니다. 당사 애플리케이션은 수집된 데이터를 차량의 주차 위치를 정확하게 기록하고 사용자 환경을 개선하기 위해서만 사용합니다. 당사는 적절하고 안전한 광고를 제공하여 사용자 보안을 우선시합니다. 당사는 이 개인정보보호정책을 수시로 업데이트하여 변경 사항을 알려드릴 수 있으므로 정기적으로 확인해 주시기 바랍니다. 개인정보 보호에 대해 질문이나 우려 사항이 있으시면 자유롭게 문의해 주시기 바랍니다.",
+                closing2: "이 개인정보보호정책을 읽어주셔서 감사하며, 주차 애플리케이션을 사용하실 때 즐겁고 안전한 환경을 경험하시기를 바랍니다."
+            },
+            pt: {
+                title: "Aplicativo de Estacionamento - Política de Privacidade",
+                lastUpdated: "Última atualização: 1º de agosto de 2023",
+                intro: "Esta política de privacidade (\"Política\") explica como o aplicativo [\"Estacionamento\"] (referido como \"Aplicativo\" ou \"Nós\") coleta, usa e divulga informações dos usuários do aplicativo móvel. O Aplicativo permite que os usuários registrem e gerenciem seus locais de estacionamento. Leia esta Política cuidadosamente para entender nossas práticas. Ao usar o Aplicativo, você consente com os termos desta Política.",
+                section1Title: "1. Informações Coletadas",
+                section1: "O Aplicativo usa apenas dados de GPS ou outros dados de localização para registrar com precisão os locais de estacionamento. Não coletamos, armazenamos ou solicitamos informações pessoais de conta de nossos usuários.",
+                section2Title: "2. Anúncios Google AdMob",
+                section2: "O Aplicativo de Estacionamento pode usar anúncios Google AdMob para suportá-lo e oferecê-lo gratuitamente. Google AdMob pode coletar informações como o identificador de publicidade do seu dispositivo, dados de localização ou outros dados para fins de direcionamento de anúncios para fornecer anúncios mais relevantes e envolventes. Essas informações podem ser usadas para personalizar o conteúdo dos anúncios com base em seus interesses.",
+                adsChildrenTitle: "Anúncios Apropriados para Crianças",
+                adsChildren: "Os anúncios exibidos no Aplicativo de Estacionamento não serão direcionados para crianças. Os conteúdos de anúncios obtidos de provedores de anúncios são selecionados e entregues de uma forma que proteja a privacidade e a segurança das crianças, visando fornecer uma experiência segura para usuários infantis.",
+                adsCategoriesTitle: "Categorias de Anúncios",
+                adsCategories: "Para garantir a segurança e privacidade do usuário, categorias específicas de anúncios que contenham conteúdo inadequado para crianças não serão exibidas ou apresentadas no Aplicativo.",
+                section3Title: "3. Segurança",
+                section3: "O Aplicativo toma medidas técnicas e administrativas apropriadas para proteger as informações do usuário. No entanto, observe que nenhum serviço baseado na Internet pode garantir segurança absoluta. Os usuários também são aconselhados a usar uma senha forte e única para proteger suas informações pessoais.",
+                section4Title: "4. Privacidade de Crianças",
+                section4: "O Aplicativo não coleta intencionalmente informações pessoais de crianças menores de 13 anos. Se você é pai, mãe ou responsável e acredita que sua criança menor de 13 anos nos forneceu informações pessoais, entre em contato conosco, e removeremos essas informações imediatamente.",
+                section5Title: "5. Outros Links",
+                section5: "Nosso Aplicativo pode conter links para outros sites ou aplicativos. No entanto, não somos responsáveis pelas práticas de compartilhamento de informações ou conteúdos desses sites vinculados. Recomendamos que tenha cuidado e leia as políticas de privacidade dos sites visitados.",
+                section6Title: "6. Alterações na Política de Privacidade",
+                section6: "Esta Política pode ser atualizada de tempos em tempos devido a mudanças na funcionalidade do Aplicativo ou requisitos legais. Usaremos meios apropriados para notificá-lo dessas alterações. Verifique nossa Política regularmente para atualizações.",
+                section7Title: "7. Contato",
+                section7: "Para qualquer pergunta ou consulta sobre esta política de privacidade ou nossas práticas de privacidade, entre em contato conosco em info.oguzhanyildirim@gmail.com.",
+                closing1: "Esta política de privacidade foi preparada para proteger a privacidade e segurança de nossos usuários. Nosso Aplicativo usa dados coletados apenas para registrar com precisão locais de estacionamento de veículos e melhorar a experiência do usuário. Priorizamos a segurança do usuário fornecendo anúncios apropriados e seguros. Podemos atualizar esta política de privacidade ocasionalmente para informá-lo de qualquer alteração; verifique regularmente. Sinta-se à vontade para entrar em contato conosco se tiver dúvidas ou preocupações sobre privacidade.",
+                closing2: "Obrigado por ler esta política de privacidade, e esperamos que você desfrute de uma experiência agradável e segura ao usar o Aplicativo de Estacionamento."
+            },
+            zh: {
+                title: "停车应用程序 - 隐私政策",
+                lastUpdated: "最后更新：2023年8月1日",
+                intro: "本隐私政策（"政策"）说明["停车"]应用程序（下称"应用程序"或"我们"）如何收集、使用和披露移动应用程序用户的信息。该应用程序允许用户记录和管理其车辆停车位。请仔细阅读本政策，了解我们的做法。通过使用应用程序，您同意本政策的条款。",
+                section1Title: "1. 收集的信息",
+                section1: "应用程序仅使用GPS或其他位置数据来准确记录车辆停车位。我们不从用户收集、存储或索取个人账户信息。",
+                section2Title: "2. Google AdMob广告",
+                section2: "停车应用程序可能会使用Google AdMob广告来支持和免费提供。Google AdMob可能会收集您设备的广告ID、位置数据或其他数据等信息，用于广告定位目的，以提供更相关和有吸引力的广告。这些信息可用于根据您的兴趣自定义广告内容。",
+                adsChildrenTitle: "适合儿童的广告",
+                adsChildren: "停车应用程序中显示的广告不会针对儿童。从广告提供商获得的广告内容以保护儿童隐私和安全的方式进行选择和投放，旨在为儿童用户提供安全体验。",
+                adsCategoriesTitle: "广告类别",
+                adsCategories: "为了确保用户安全和隐私，包含不适合儿童内容的特定广告类别将不会在应用程序内显示或呈现。",
+                section3Title: "3. 安全性",
+                section3: "应用程序采取适当的技术和行政措施来保护用户信息。但请注意，基于互联网的服务无法保证绝对安全。还建议用户使用强大且唯一的密码来保护他们的个人信息。",
+                section4Title: "4. 儿童隐私",
+                section4: "该应用程序不会有意收集13岁以下儿童的个人信息。如果您是父母或监护人，并且认为您13岁以下的孩子向我们提供了个人信息，请与我们联系，我们将立即删除此类信息。",
+                section5Title: "5. 其他链接",
+                section5: "我们的应用程序可能包含指向其他网站或应用程序的链接。但是，我们对这些链接网站的信息共享做法或内容不负责。我们建议您谨慎并阅读您访问的网站的隐私政策。",
+                section6Title: "6. 隐私政策的变更",
+                section6: "由于应用程序功能的变更或法律要求的变更，本政策可能不时更新。我们将使用适当的方式通知您这些变更。请定期检查我们的政策以获取更新。",
+                section7Title: "7. 联系方式",
+                section7: "如对本隐私政策或我们的隐私做法有任何疑问或询问，请通过 info.oguzhanyildirim@gmail.com 与我们联系。",
+                closing1: "本隐私政策的制定是为了保护我们用户的隐私和安全。我们的应用程序仅使用收集的数据来准确记录车辆停车位并增强用户体验。我们通过提供适当和安全的广告来优先考虑用户安全。我们可能会不时更新本隐私政策以通知您任何变更，请定期查看。如您对隐私有任何疑问或顾虑，请随时与我们联系。",
+                closing2: "感谢您阅读本隐私政策，我们希望您在使用停车应用程序时享受愉快和安全的体验。"
+            }
+        };
+
+        function changeLanguage(lang) {
+            const trans = translations[lang];
+            if (trans) {
+                document.getElementById('title').textContent = trans.title;
+                document.getElementById('lastUpdated').innerHTML = `<em>${trans.lastUpdated}</em>`;
+                document.getElementById('intro').textContent = trans.intro;
+                document.getElementById('section1Title').textContent = trans.section1Title;
+                document.getElementById('section1').textContent = trans.section1;
+                document.getElementById('section2Title').textContent = trans.section2Title;
+                document.getElementById('section2').textContent = trans.section2;
+                document.getElementById('adsChildrenTitle').textContent = trans.adsChildrenTitle;
+                document.getElementById('adsChildren').textContent = trans.adsChildren;
+                document.getElementById('adsCategoriesTitle').textContent = trans.adsCategoriesTitle;
+                document.getElementById('adsCategories').textContent = trans.adsCategories;
+                document.getElementById('section3Title').textContent = trans.section3Title;
+                document.getElementById('section3').textContent = trans.section3;
+                document.getElementById('section4Title').textContent = trans.section4Title;
+                document.getElementById('section4').textContent = trans.section4;
+                document.getElementById('section5Title').textContent = trans.section5Title;
+                document.getElementById('section5').textContent = trans.section5;
+                document.getElementById('section6Title').textContent = trans.section6Title;
+                document.getElementById('section6').textContent = trans.section6;
+                document.getElementById('section7Title').textContent = trans.section7Title;
+                document.getElementById('section7').textContent = trans.section7;
+                document.getElementById('closing1').textContent = trans.closing1;
+                document.getElementById('closing2').textContent = trans.closing2;
+                localStorage.setItem('selectedLanguage', lang);
+            }
+        }
+
+        // Sayfayı yükledikten sonra kullanıcının daha önceki dil tercihini al
+        window.onload = function() {
+            const savedLanguage = localStorage.getItem('selectedLanguage') || 'en';
+            document.getElementById('languageDropdown').value = savedLanguage;
+            changeLanguage(savedLanguage);
+        };
+    </script>
 </body>
 
 </html>
